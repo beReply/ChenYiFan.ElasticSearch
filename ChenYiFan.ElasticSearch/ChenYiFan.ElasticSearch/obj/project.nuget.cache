@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GBuY9IkrbJ/ixdAU+AG9N8+Ad29+VVkE0Li263abci39iuLH/87jLFktVlqUaDxHN2zxgC4toB5z9A6mK30/aw==",
+  "dgSpecHash": "md3NGIxR3E3sazFiKmWMloH5sSGL0TfYvKsnJWTUgyNEKxND/maViDC+GTMZAmsfOqKNHjxDGlyqwlJ8xrT0WQ==",
   "success": true,
-  "projectFilePath": "H:\\codeLib\\Elasticsearch\\ElasticsearchNet\\ChenYiFan.ElasticSearch\\ChenYiFan.ElasticSearch\\ChenYiFan.ElasticSearch.csproj",
+  "projectFilePath": "H:\\codeLib\\Elasticsearch\\ElasticsearchNet\\ChenYifan.Elasticsearch\\ChenYiFan.ElasticSearch\\ChenYiFan.ElasticSearch.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\23663\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],

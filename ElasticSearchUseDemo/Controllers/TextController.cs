@@ -32,5 +32,22 @@ namespace ElasticSearchUseDemo.Controllers
 
             return res;
         }
+
+        [HttpPost("/Search/WhereIf")]
+        public async Task<EsMessage<Product>> SearchWhereIfAsync(int? price, string remark)
+        {
+            var queryNode = new QueryNode();
+
+            queryNode
+                .WhereIf<Product>(price != null, x => x.Price < 10)
+                .WhereIf<Product>(remark != null, x => x.Remark == remark)
+                .From(0).Size(100);
+
+            var res = await _requestElasticSearch.SearchAsync<Product>(queryNode);
+
+            Console.WriteLine(res);
+
+            return res;
+        }
     }
 }

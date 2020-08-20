@@ -316,20 +316,6 @@
           "ElasticSearchUseDemo.dll": {}
         }
       },
-      "ChenYiFan.ElasticSearch/1.0.0": {
-        "dependencies": {
-          "Newtonsoft.Json": "12.0.3"
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/ChenYiFan.ElasticSearch.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        },
-        "compile": {
-          "lib/netcoreapp3.1/ChenYiFan.ElasticSearch.dll": {}
-        }
-      },
       "Microsoft.Extensions.ApiDescription.Server/3.0.0": {},
       "Microsoft.OpenApi/1.1.4": {
         "runtime": {
@@ -398,6 +384,17 @@
         },
         "compile": {
           "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
+        }
+      },
+      "ChenYiFan.ElasticSearch/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "ChenYiFan.ElasticSearch.dll": {}
+        },
+        "compile": {
+          "ChenYiFan.ElasticSearch.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -2100,13 +2097,6 @@
       "serviceable": false,
       "sha512": ""
     },
-    "ChenYiFan.ElasticSearch/1.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-jVaUorLs4YsxjmjmjJxOUZo9rFLXvNFyo19mWiDajwOYqDarYFA5VAo6OpXrxOcg6Yexf0hqOYJMlLgjb+16ig==",
-      "path": "chenyifan.elasticsearch/1.0.0",
-      "hashPath": "chenyifan.elasticsearch.1.0.0.nupkg.sha512"
-    },
     "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
       "type": "package",
       "serviceable": true,
@@ -2155,6 +2145,11 @@
       "sha512": "sha512-a2Ym9DYrvTZ/Yt8GVfn6M1ZP++Ra3KAfCNe4pTtkNiHpBgWhsYWUT3T07REtFImduBh93GAHuItZpltSOZV13A==",
       "path": "swashbuckle.aspnetcore.swaggerui/5.5.1",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.5.5.1.nupkg.sha512"
+    },
+    "ChenYiFan.ElasticSearch/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
       "type": "referenceassembly",

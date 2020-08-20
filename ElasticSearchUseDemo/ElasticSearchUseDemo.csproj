@@ -5,8 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ChenYiFan.ElasticSearch" Version="1.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ChenYifan.Elasticsearch\ChenYiFan.ElasticSearch\ChenYiFan.ElasticSearch.csproj" />
   </ItemGroup>
 
 </Project>

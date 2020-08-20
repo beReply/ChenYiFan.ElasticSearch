@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Reflection;
 using System.Text;
 
 namespace ChenYiFan.ElasticSearch.Tools.QueryExpressions
@@ -38,10 +39,28 @@ namespace ChenYiFan.ElasticSearch.Tools.QueryExpressions
             return base.VisitConstant(node);
         }
 
+
         protected override Expression VisitMember(MemberExpression node)
         {
-            this._leafList.Push(node.Member.Name);
+            //var value = node.Type;
+            //var vv = node.Member.ReflectedType?.GetProperty(node.Member.Name);
+            //Console.WriteLine(value);
+            //this._leafList.Push(value);
+            //System.Reflection.RuntimePropertyInfo' to type 'System.Reflection.FieldInfo'.
+
+
+            if (node.Member is FieldInfo field)
+            {
+                var ce = (ConstantExpression)node.Expression;
+                var value = field.GetValue(ce.Value).ToString();
+                this._leafList.Push(value);
+            }
+            else if (node.Member is PropertyInfo)
+            {
+                this._leafList.Push(node.Member.Name);
+            }
             return node;
         }
+
     }
 }

@@ -2,18 +2,6 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "ChenYiFan.ElasticSearch/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "12.0.3"
-        },
-        "compile": {
-          "lib/netcoreapp3.1/ChenYiFan.ElasticSearch.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/ChenYiFan.ElasticSearch.dll": {}
-        }
-      },
       "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
         "type": "package",
         "build": {
@@ -96,22 +84,23 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "ChenYiFan.ElasticSearch/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "bin/placeholder/ChenYiFan.ElasticSearch.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ChenYiFan.ElasticSearch.dll": {}
+        }
       }
     }
   },
   "libraries": {
-    "ChenYiFan.ElasticSearch/1.0.0": {
-      "sha512": "jVaUorLs4YsxjmjmjJxOUZo9rFLXvNFyo19mWiDajwOYqDarYFA5VAo6OpXrxOcg6Yexf0hqOYJMlLgjb+16ig==",
-      "type": "package",
-      "path": "chenyifan.elasticsearch/1.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "chenyifan.elasticsearch.1.0.0.nupkg.sha512",
-        "chenyifan.elasticsearch.nuspec",
-        "lib/netcoreapp3.1/ChenYiFan.ElasticSearch.dll"
-      ]
-    },
     "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
       "sha512": "LH4OE/76F6sOCslif7+Xh3fS/wUUrE5ryeXAMcoCnuwOQGT5Smw0p57IgDh/pHgHaGz/e+AmEQb7pRgb++wt0w==",
       "type": "package",
@@ -249,6 +238,11 @@
         "swashbuckle.aspnetcore.swaggerui.5.5.1.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "ChenYiFan.ElasticSearch/1.0.0": {
+      "type": "project",
+      "path": "../ChenYifan.Elasticsearch/ChenYiFan.ElasticSearch/ChenYiFan.ElasticSearch.csproj",
+      "msbuildProject": "../ChenYifan.Elasticsearch/ChenYiFan.ElasticSearch/ChenYiFan.ElasticSearch.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -289,7 +283,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "H:\\codeLib\\Elasticsearch\\ElasticsearchNet\\ChenYifan.Elasticsearch\\ChenYiFan.ElasticSearch\\ChenYiFan.ElasticSearch.csproj": {
+              "projectPath": "H:\\codeLib\\Elasticsearch\\ElasticsearchNet\\ChenYifan.Elasticsearch\\ChenYiFan.ElasticSearch\\ChenYiFan.ElasticSearch.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -301,10 +299,6 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
-          "ChenYiFan.ElasticSearch": {
-            "target": "Package",
-            "version": "[1.0.0, )"
-          },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[5.5.1, )"

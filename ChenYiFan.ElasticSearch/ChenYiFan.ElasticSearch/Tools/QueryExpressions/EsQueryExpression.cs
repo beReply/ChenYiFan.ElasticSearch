@@ -211,6 +211,18 @@ namespace ChenYiFan.ElasticSearch.Tools.QueryExpressions
             return node.Query().Bool().MultiMust().RangeOrMatch<T>(expression).ToRootNode();
         }
 
+        public static QueryNode WhereIf<T>(this QueryNode node, bool flag, Expression<Func<T, bool>> expression)
+        {
+            if (flag)
+            {
+                return node.Query().Bool().MultiMust().RangeOrMatch<T>(expression).ToRootNode();
+            }
+            else
+            {
+                return node;
+            }
+        }
+
 
         #endregion
     }

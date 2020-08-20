@@ -26,3 +26,4 @@ H:\codeLib\Elasticsearch\ElasticsearchNet\ElasticSearchUseDemo\bin\Debug\netcore
 H:\codeLib\Elasticsearch\ElasticsearchNet\ElasticSearchUseDemo\obj\Debug\netcoreapp3.1\ElasticSearchUseDemo.csproj.CoreCompileInputs.cache
 H:\codeLib\Elasticsearch\ElasticsearchNet\ElasticSearchUseDemo\obj\Debug\netcoreapp3.1\ElasticSearchUseDemo.MvcApplicationPartsAssemblyInfo.cs
 H:\codeLib\Elasticsearch\ElasticsearchNet\ElasticSearchUseDemo\obj\Debug\netcoreapp3.1\ElasticSearchUseDemo.MvcApplicationPartsAssemblyInfo.cache
+H:\codeLib\Elasticsearch\ElasticsearchNet\ElasticSearchUseDemo\bin\Debug\netcoreapp3.1\ChenYiFan.ElasticSearch.pdb
