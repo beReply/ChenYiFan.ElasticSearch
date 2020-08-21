@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ChenYiFan.ElasticSearch.IConstraint
 {
-    public interface IHasIdAsId : IHasId<int>
+    public interface IHasIntAsId : IHasId<int>
     {
         public new int Id { get; set; }
     }

@@ -22,6 +22,25 @@ namespace ElasticSearchUseDemo.Controllers
             _requestElasticSearch = requestElasticSearch;
         }
 
+        [HttpPost("/Index/Student")]
+        public async Task IndexStudentAsync()
+        {
+            for (int i = 0; i < 10000; i++)
+            {
+                var student = new Student
+                {
+                    Id = i,
+                    Name = RandomGeneratorExtension.GenerateChineseWord(3),
+                    Age = Convert.ToInt32(RandomNumberGenerator.Create().GeneratorDigitalRandom(2)),
+                    Height = Convert.ToInt32(RandomNumberGenerator.Create().GeneratorDigitalRandom(3)),
+                    Weight = Convert.ToInt32(RandomNumberGenerator.Create().GeneratorDigitalRandom(3)),
+                    EnrollmentTime = DateTime.Now,
+                    Remark = RandomGeneratorExtension.GenerateChineseWord(10)
+                };
+                await _requestElasticSearch.IndexAsync<Student, int>(student);
+            }
+        }
+
         [HttpPost("/Text/Product")]
         public async Task ProductionAsync()
         {
@@ -65,6 +84,25 @@ namespace ElasticSearchUseDemo.Controllers
                 .From(0).Size(100);
 
             var res = await _requestElasticSearch.SearchAsync<Product, Guid>(queryNode);
+
+            Console.WriteLine(res);
+
+            return res;
+        }
+
+        [HttpPost("/Search/Student")]
+        public async Task<EsMessage<Student>> SearchStudentAsync([FromBody] Student student)
+        {
+            var queryNode = new QueryNode();
+
+            var name = student.Name;
+            var remark = student.Remark;
+            queryNode
+                .WhereIf<Student>(student.Name != null, x => x.Name == name)
+                .WhereIf<Student>(student.Remark != null, x => x.Remark == remark)
+                .From(0).Size(100);
+
+            var res = await _requestElasticSearch.SearchAsync<Student, int>(queryNode);
 
             Console.WriteLine(res);
 
