@@ -6,18 +6,26 @@ using System.Text;
 
 namespace ChenYiFan.ElasticSearch.Tools.QueryExpressions
 {
-    class EsExpressionVisitor : ExpressionVisitor
+    public class QueueExpressionVisitor : ExpressionVisitor
     {
-        private readonly Stack<string> _leafList = new Stack<string>();
+        private readonly Queue<string> _queue = new Queue<string>();
 
-        public EsExpressionVisitor()
+        // 出队列
+        public string Dequeue()
         {
-
+            return _queue.Dequeue();
         }
 
-        public string GetWhere()
+        // 队列中元素数量
+        public int QueueCount()
         {
-            return string.Join(" ", _leafList);
+            return _queue.Count;
+        }
+
+        // 队列是否为空
+        public bool QueueIsEmpty()
+        {
+            return _queue.Count == 0;
         }
 
         public override Expression Visit(Expression node)
@@ -25,17 +33,17 @@ namespace ChenYiFan.ElasticSearch.Tools.QueryExpressions
             return base.Visit(node);
         }
 
+
         protected override Expression VisitBinary(BinaryExpression node)
         {
-            this.Visit(node.Right);
-            this._leafList.Push(node.NodeType.ToString());
-            this.Visit(node.Left);
-            return node;
+            _queue.Enqueue(node.NodeType.ToString());
+            return base.VisitBinary(node);
         }
+
 
         protected override Expression VisitConstant(ConstantExpression node)
         {
-            this._leafList.Push(node.Value?.ToString());
+            _queue.Enqueue(node.Value?.ToString());
             return base.VisitConstant(node);
         }
 
@@ -46,21 +54,13 @@ namespace ChenYiFan.ElasticSearch.Tools.QueryExpressions
             {
                 var ce = (ConstantExpression)node.Expression;
                 var value = field.GetValue(ce.Value).ToString();
-                this._leafList.Push(value);
+                _queue.Enqueue(value);
             }
             else if (node.Member is PropertyInfo)
             {
-
-
-                var type = node.Member.ReflectedType;
-                var prop = type?.GetProperty(node.Member.Name);
-                var ce = (ConstantExpression)node.Expression;
-                var value = prop?.GetValue(ce).ToString();
-
-                this._leafList.Push(node.Member.Name);
+                _queue.Enqueue(node.Member.Name);
             }
             return node;
         }
-
     }
 }

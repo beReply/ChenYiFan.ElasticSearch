@@ -98,8 +98,8 @@ namespace ElasticSearchUseDemo.Controllers
             var name = student.Name;
             var remark = student.Remark;
             queryNode
-                .WhereIf<Student>(student.Name != null, x => x.Name == name)
-                .WhereIf<Student>(student.Remark != null, x => x.Remark == remark)
+                .WhereIf<Student>(student.Name != null, x => x.Name == student.Name)
+                .WhereIf<Student>(student.Remark != null, x => x.Remark == student.Remark)
                 .From(0).Size(100);
 
             var res = await _requestElasticSearch.SearchAsync<Student, int>(queryNode);
