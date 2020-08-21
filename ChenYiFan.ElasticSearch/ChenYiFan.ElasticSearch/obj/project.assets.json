@@ -56,13 +56,13 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "restore": {
-      "projectUniqueName": "H:\\codeLib\\Elasticsearch\\ElasticsearchNet\\ChenYiFan.ElasticSearch\\ChenYiFan.ElasticSearch\\ChenYiFan.ElasticSearch.csproj",
+      "projectUniqueName": "H:\\codeLib\\Elasticsearch\\ElasticsearchNet\\ChenYifan.Elasticsearch\\ChenYiFan.ElasticSearch\\ChenYiFan.ElasticSearch.csproj",
       "projectName": "ChenYiFan.ElasticSearch",
-      "projectPath": "H:\\codeLib\\Elasticsearch\\ElasticsearchNet\\ChenYiFan.ElasticSearch\\ChenYiFan.ElasticSearch\\ChenYiFan.ElasticSearch.csproj",
+      "projectPath": "H:\\codeLib\\Elasticsearch\\ElasticsearchNet\\ChenYifan.Elasticsearch\\ChenYiFan.ElasticSearch\\ChenYiFan.ElasticSearch.csproj",
       "packagesPath": "C:\\Users\\23663\\.nuget\\packages\\",
-      "outputPath": "H:\\codeLib\\Elasticsearch\\ElasticsearchNet\\ChenYiFan.ElasticSearch\\ChenYiFan.ElasticSearch\\obj\\",
+      "outputPath": "H:\\codeLib\\Elasticsearch\\ElasticsearchNet\\ChenYifan.Elasticsearch\\ChenYiFan.ElasticSearch\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

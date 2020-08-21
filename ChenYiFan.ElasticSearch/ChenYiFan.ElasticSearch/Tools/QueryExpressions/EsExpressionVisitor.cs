@@ -42,13 +42,6 @@ namespace ChenYiFan.ElasticSearch.Tools.QueryExpressions
 
         protected override Expression VisitMember(MemberExpression node)
         {
-            //var value = node.Type;
-            //var vv = node.Member.ReflectedType?.GetProperty(node.Member.Name);
-            //Console.WriteLine(value);
-            //this._leafList.Push(value);
-            //System.Reflection.RuntimePropertyInfo' to type 'System.Reflection.FieldInfo'.
-
-
             if (node.Member is FieldInfo field)
             {
                 var ce = (ConstantExpression)node.Expression;

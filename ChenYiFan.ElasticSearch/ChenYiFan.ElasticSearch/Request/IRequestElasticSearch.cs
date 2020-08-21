@@ -11,14 +11,14 @@ namespace ChenYiFan.ElasticSearch.Request
 {
     public interface IRequestElasticSearch
     {
-        Task<EsResponseResult> IndexAsync<T>(T data) where T : IHasGuidAsId;
+        Task<EsResponseResult> IndexAsync<T, TId>(T data) where T : IHasId<TId>;
 
-        Task<EsResponseResult> CreateAsync<T>(T data) where T : IHasGuidAsId;
+        Task<EsResponseResult> CreateAsync<T, TId>(T data) where T : IHasId<TId>;
 
-        Task<EsResponseResult> DeleteAsync<T>(Guid id) where T : IHasGuidAsId;
+        Task<EsResponseResult> DeleteAsync<T, TId>(Guid id) where T : IHasId<TId>;
 
-        Task<EsResponseResult> UpdateAsync<T>(T data) where T : IHasGuidAsId;
+        Task<EsResponseResult> UpdateAsync<T, TId>(T data) where T : IHasId<TId>;
 
-        Task<EsMessage<T>> SearchAsync<T>(QueryNode queryNode) where T : IHasGuidAsId;
+        Task<EsMessage<T>> SearchAsync<T, TId>(QueryNode queryNode) where T : IHasId<TId>;
     }
 }

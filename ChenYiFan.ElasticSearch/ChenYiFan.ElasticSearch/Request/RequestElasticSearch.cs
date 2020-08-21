@@ -31,9 +31,10 @@ namespace ChenYiFan.ElasticSearch.Request
         ///     如果ID不存在，创建新的文档。否则先删除现在的文档，再创建新的文档，版本会增加
         /// </summary>
         /// <typeparam name="T"></typeparam>
+        /// <typeparam name="TId"></typeparam>
         /// <param name="data"></param>
         /// <returns></returns>
-        public async Task<EsResponseResult> IndexAsync<T>(T data) where T : IHasGuidAsId
+        public async Task<EsResponseResult> IndexAsync<T, TId>(T data) where T : IHasId<TId>
         {
             return await SendAsync(HttpMethod.Put, typeof(T).Name.ToLower(),
                     ElasticOperation._doc.ToString(), data.Id.ToString(), JsonConvert.SerializeObject(data));
@@ -44,9 +45,10 @@ namespace ChenYiFan.ElasticSearch.Request
         ///     如果ID已经存在，会失败
         /// </summary>
         /// <typeparam name="T"></typeparam>
+        /// <typeparam name="TId"></typeparam>
         /// <param name="data"></param>
         /// <returns></returns>
-        public async Task<EsResponseResult> CreateAsync<T>(T data) where T : IHasGuidAsId
+        public async Task<EsResponseResult> CreateAsync<T, TId>(T data) where T : IHasId<TId>
         {
             return await SendAsync(HttpMethod.Put, typeof(T).Name.ToLower(),
                     ElasticOperation._create.ToString(), data.Id.ToString(), JsonConvert.SerializeObject(data));
@@ -56,9 +58,10 @@ namespace ChenYiFan.ElasticSearch.Request
         /// 删除一个文档
         /// </summary>
         /// <typeparam name="T"></typeparam>
+        /// <typeparam name="TId"></typeparam>
         /// <param name="id"></param>
         /// <returns></returns>
-        public async Task<EsResponseResult> DeleteAsync<T>(Guid id) where T : IHasGuidAsId
+        public async Task<EsResponseResult> DeleteAsync<T, TId>(Guid id) where T : IHasId<TId>
         {
             return await SendAsync(HttpMethod.Delete, typeof(T).Name.ToLower(),
                     ElasticOperation._doc.ToString(), id.ToString(), null);
@@ -69,9 +72,10 @@ namespace ChenYiFan.ElasticSearch.Request
         ///     文档必须已经存在，更新会对相应字段做增量修改
         /// </summary>
         /// <typeparam name="T"></typeparam>
+        /// <typeparam name="TId"></typeparam>
         /// <param name="data"></param>
         /// <returns></returns>
-        public async Task<EsResponseResult> UpdateAsync<T>(T data) where T : IHasGuidAsId
+        public async Task<EsResponseResult> UpdateAsync<T, TId>(T data) where T : IHasId<TId>
         {
             return await SendAsync(HttpMethod.Post, typeof(T).Name.ToLower(),
                     ElasticOperation._update.ToString(), data.Id.ToString(), JsonConvert.SerializeObject(new { doc = data }));
@@ -81,7 +85,7 @@ namespace ChenYiFan.ElasticSearch.Request
 
         #region 查询
 
-        public async Task<EsMessage<T>> SearchAsync<T>(QueryNode queryNode) where T : IHasGuidAsId
+        public async Task<EsMessage<T>> SearchAsync<T, TId>(QueryNode queryNode) where T : IHasId<TId>
         {
             var body = queryNode.GenerateQueryString();
 

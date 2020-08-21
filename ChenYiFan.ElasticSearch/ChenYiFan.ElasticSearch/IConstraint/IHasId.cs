@@ -4,8 +4,8 @@ using System.Text;
 
 namespace ChenYiFan.ElasticSearch.IConstraint
 {
-    public interface IHasGuidAsId : IHasId<Guid>
+    public interface IHasId<TId>
     {
-        public new Guid Id { get; set; }
+        public TId Id { get; set; }
     }
 }

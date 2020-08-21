@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1nN9bVhHifBYwhhBdAX7uCOvry4WpMP4DLivPkfqZpYK+KCWcMOViB1SaKoRrdVIUN5HGKrvZhfEU6hvDH9H7g==",
+  "dgSpecHash": "hOSSMEwhULO9wvNu2dDvlnUt0mBiwSMwl7eKaf7WMNWcRe5SYJoorTg3M+JW6f2NZZR5+yd5RZt0/592YOdcew==",
   "success": true,
   "projectFilePath": "H:\\codeLib\\Elasticsearch\\ElasticsearchNet\\ElasticSearchUseDemo\\ElasticSearchUseDemo.csproj",
   "expectedPackageFiles": [
@@ -11,7 +11,7 @@
     "C:\\Users\\23663\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.5.1\\swashbuckle.aspnetcore.swagger.5.5.1.nupkg.sha512",
     "C:\\Users\\23663\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.5.1\\swashbuckle.aspnetcore.swaggergen.5.5.1.nupkg.sha512",
     "C:\\Users\\23663\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.5.1\\swashbuckle.aspnetcore.swaggerui.5.5.1.nupkg.sha512",
-    "C:\\Users\\23663\\.nuget\\packages\\chenyifan.elasticsearch\\1.0.0\\chenyifan.elasticsearch.1.0.0.nupkg.sha512"
+    "C:\\Users\\23663\\.nuget\\packages\\chenyifan.elasticsearch\\1.0.1\\chenyifan.elasticsearch.1.0.1.nupkg.sha512"
   ],
   "logs": []
 }
