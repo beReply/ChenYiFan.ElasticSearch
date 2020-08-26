@@ -59,7 +59,7 @@ namespace ChenYiFan.ElasticSearch.Tools.QueryExpressions
 
             if (visitor.QueueIsEmpty())
             {
-                node.RangeOrMatch<T>(expression);
+                node.Bool().MultiMust().RangeOrMatch<T>(expression);
             }
 
             while (!visitor.QueueIsEmpty())
