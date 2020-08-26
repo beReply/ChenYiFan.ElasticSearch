@@ -92,5 +92,20 @@ namespace ChenYiFan.ElasticSearch.Tools.QueryExpressions
 
         #endregion
 
+
+        #region 判断子节点是否有
+
+        public static bool HasShould(this QueryNode node)
+        {
+            return node.Node != null && node.Node.Any(x => x.Name == "should");
+        }
+
+        public static bool HasMust(this QueryNode node)
+        {
+            return node.Node != null && node.Node.Any(x => x.Name == "must");
+        }
+
+        #endregion
+
     }
 }

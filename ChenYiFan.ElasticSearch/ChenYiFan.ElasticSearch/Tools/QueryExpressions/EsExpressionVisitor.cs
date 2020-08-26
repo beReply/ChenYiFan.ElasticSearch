@@ -42,25 +42,47 @@ namespace ChenYiFan.ElasticSearch.Tools.QueryExpressions
 
         protected override Expression VisitMember(MemberExpression node)
         {
-            if (node.Member is FieldInfo field)
-            {
-                var ce = (ConstantExpression)node.Expression;
-                var value = field.GetValue(ce.Value).ToString();
-                this._leafList.Push(value);
-            }
-            else if (node.Member is PropertyInfo)
-            {
-
-
-                var type = node.Member.ReflectedType;
-                var prop = type?.GetProperty(node.Member.Name);
-                var ce = (ConstantExpression)node.Expression;
-                var value = prop?.GetValue(ce).ToString();
-
-                this._leafList.Push(node.Member.Name);
-            }
+            var value = ReadMemberExpression(node, new Stack<PropertyInfo>()).ToString();
+            _leafList.Push(value);
             return node;
         }
+
+        #region 私有工具
+
+        private object ReadMemberExpression(MemberExpression nodeMember, Stack<PropertyInfo> property)
+        {
+            if (nodeMember.Member is FieldInfo field)
+            {
+                var ce = (ConstantExpression)nodeMember.Expression;
+                var value = field.GetValue(ce.Value);
+                while (property.Count > 0)
+                {
+                    var propI = property.Pop();
+                    value = propI.GetValue(value);
+                }
+                return value;
+
+            }
+            else if (nodeMember.Member is PropertyInfo propertyInfo)
+            {
+                try
+                {
+                    var me = (MemberExpression)nodeMember.Expression;
+                    property.Push(propertyInfo);
+                    var res = ReadMemberExpression(me, property);
+
+                    return res;
+                }
+                catch (Exception)
+                {
+                    return nodeMember.Member.Name;
+                }
+            }
+
+            return "error";
+        }
+
+        #endregion
 
     }
 }

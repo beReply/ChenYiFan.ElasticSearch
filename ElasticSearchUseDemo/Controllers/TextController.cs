@@ -95,8 +95,6 @@ namespace ElasticSearchUseDemo.Controllers
         {
             var queryNode = new QueryNode();
 
-            var name = student.Name;
-            var remark = student.Remark;
             queryNode
                 .WhereIf<Student>(student.Name != null, x => x.Name == student.Name)
                 .WhereIf<Student>(student.Remark != null, x => x.Remark == student.Remark)

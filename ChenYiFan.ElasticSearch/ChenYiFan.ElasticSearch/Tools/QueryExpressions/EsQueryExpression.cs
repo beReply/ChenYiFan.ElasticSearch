@@ -96,29 +96,29 @@ namespace ChenYiFan.ElasticSearch.Tools.QueryExpressions
             return node;
         }
 
-        public static QueryNode ShouldOrMust<T>(this QueryNode node, Expression<Func<T, bool>> expression)
-        {
-            var visitor = new QueueExpressionVisitor();
-            visitor.Visit(expression);
+        //public static QueryNode ShouldOrMust<T>(this QueryNode node, Expression<Func<T, bool>> expression)
+        //{
+        //    var visitor = new QueueExpressionVisitor();
+        //    visitor.Visit(expression);
 
-            while (!visitor.QueueIsEmpty())
-            {
-                var element = visitor.Dequeue();
-                if (element == "AndAlso")
-                {
-                    if (node.Node != null && node.Node.Any(x => x.Name == ""))
-                    {
+        //    while (!visitor.QueueIsEmpty())
+        //    {
+        //        var element = visitor.Dequeue();
+        //        if (element == "AndAlso")
+        //        {
+        //            if (node.Node != null && node.Node.Any(x => x.Name == ""))
+        //            {
                         
-                    }
-                }
-                else if (element == "OrElse")
-                {
-                    node.MultiShould();
-                }
-            }
+        //            }
+        //        }
+        //        else if (element == "OrElse")
+        //        {
+        //            node.MultiShould();
+        //        }
+        //    }
 
-            return node;
-        }
+        //    return node;
+        //}
 
         #endregion
 
