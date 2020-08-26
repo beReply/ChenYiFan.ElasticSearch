@@ -5,7 +5,7 @@
   },
   "projects": {
     "H:\\codeLib\\Elasticsearch\\ElasticsearchNet\\ChenYifan.Elasticsearch\\ChenYiFan.ElasticSearch\\ChenYiFan.ElasticSearch.csproj": {
-      "version": "1.0.4",
+      "version": "1.0.5",
       "restore": {
         "projectUniqueName": "H:\\codeLib\\Elasticsearch\\ElasticsearchNet\\ChenYifan.Elasticsearch\\ChenYiFan.ElasticSearch\\ChenYiFan.ElasticSearch.csproj",
         "projectName": "ChenYiFan.ElasticSearch",

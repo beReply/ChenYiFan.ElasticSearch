@@ -3,10 +3,10 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <PackageId>ChenYiFan.ElasticSearch</PackageId>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
     <Authors>ChenYiFan</Authors>
     <Company>none</Company>
-    <ReadMeMdUrl>https://github.com/beReply/ChenYiFan.ElasticSearch</ReadMeMdUrl>
+    <projectUrl>https://github.com/beReply/ChenYiFan.ElasticSearch</projectUrl>
   </PropertyGroup>
 
   <ItemGroup>
