@@ -106,5 +106,19 @@ namespace ElasticSearchUseDemo.Controllers
 
             return res;
         }
+
+
+        [HttpPost("Test")]
+        public async Task<EsMessage<Student>> TestAsync([FromBody] Student student)
+        {
+            var queryNode = new QueryNode();
+
+            queryNode.Where<Student>(x =>
+                x.Remark == student.Remark).From(0).Size(200);
+
+            var res = await _requestElasticSearch.SearchAsync<Student, int>(queryNode);
+
+            return res;
+        }
     }
 }

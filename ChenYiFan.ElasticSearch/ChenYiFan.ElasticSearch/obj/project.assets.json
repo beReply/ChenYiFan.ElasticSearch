@@ -56,7 +56,7 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
-    "version": "1.0.3",
+    "version": "1.0.4",
     "restore": {
       "projectUniqueName": "H:\\codeLib\\Elasticsearch\\ElasticsearchNet\\ChenYifan.Elasticsearch\\ChenYiFan.ElasticSearch\\ChenYiFan.ElasticSearch.csproj",
       "projectName": "ChenYiFan.ElasticSearch",
