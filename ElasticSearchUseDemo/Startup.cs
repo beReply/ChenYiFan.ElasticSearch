@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ChenYiFan.ElasticSearch.Configuration;
+using ChenYiFan.ElasticSearch.Extensions;
 using ChenYiFan.ElasticSearch.Request;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -34,17 +35,8 @@ namespace ElasticSearchUseDemo
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
             });
 
-            #region ≤Œ ˝≈‰÷√
 
-            services.AddSingleton<ElasticSearchConf>(new ElasticSearchConf
-            {
-                Url = _configuration["ElasticSearch:Url"]
-            });
-
-            #endregion
-
-            // ElasticSearch
-            services.AddTransient<IRequestElasticSearch, RequestElasticSearch>();
+            services.AddCyfElasticSearchConf(_configuration);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

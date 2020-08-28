@@ -5,5 +5,5 @@ H:\codeLib\Elasticsearch\ElasticsearchNet\ChenYiFan.ElasticSearch\ChenYiFan.Elas
 H:\codeLib\Elasticsearch\ElasticsearchNet\ChenYiFan.ElasticSearch\ChenYiFan.ElasticSearch\bin\Debug\netcoreapp3.1\ChenYiFan.ElasticSearch.pdb
 H:\codeLib\Elasticsearch\ElasticsearchNet\ChenYiFan.ElasticSearch\ChenYiFan.ElasticSearch\obj\Debug\netcoreapp3.1\ChenYiFan.ElasticSearch.dll
 H:\codeLib\Elasticsearch\ElasticsearchNet\ChenYiFan.ElasticSearch\ChenYiFan.ElasticSearch\obj\Debug\netcoreapp3.1\ChenYiFan.ElasticSearch.pdb
-H:\codeLib\Elasticsearch\ElasticsearchNet\ChenYiFan.ElasticSearch\ChenYiFan.ElasticSearch\obj\Debug\netcoreapp3.1\ChenYiFan.ElasticSearch.csproj.CoreCompileInputs.cache
 H:\codeLib\Elasticsearch\ElasticsearchNet\ChenYifan.Elasticsearch\ChenYiFan.ElasticSearch\obj\Debug\netcoreapp3.1\ChenYiFan.ElasticSearch.csprojAssemblyReference.cache
+H:\codeLib\Elasticsearch\ElasticsearchNet\ChenYifan.Elasticsearch\ChenYiFan.ElasticSearch\obj\Debug\netcoreapp3.1\ChenYiFan.ElasticSearch.csproj.CoreCompileInputs.cache

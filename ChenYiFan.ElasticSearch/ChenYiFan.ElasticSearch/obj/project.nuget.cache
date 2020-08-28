@@ -1,9 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "WXfmOMbKDjyuKdAty/Ry7dDJFhnS33PxZUrPX1kSosm3amygIsJIb5xwUdYlhH5gWiKGhwGbTA8Sgbj16ruIxA==",
+  "dgSpecHash": "UdjtB89I+3M4zJxkd7+yuR6tbACnANw7CQAf9N9wh4iOJmUrl1kTlAlfhCk9bTu3o8Osoe3tPtpWfgHqvQytPw==",
   "success": true,
   "projectFilePath": "H:\\codeLib\\Elasticsearch\\ElasticsearchNet\\ChenYifan.Elasticsearch\\ChenYiFan.ElasticSearch\\ChenYiFan.ElasticSearch.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\23663\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.7\\microsoft.extensions.configuration.3.1.7.nupkg.sha512",
+    "C:\\Users\\23663\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.7\\microsoft.extensions.configuration.abstractions.3.1.7.nupkg.sha512",
+    "C:\\Users\\23663\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.7\\microsoft.extensions.configuration.binder.3.1.7.nupkg.sha512",
+    "C:\\Users\\23663\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.7\\microsoft.extensions.dependencyinjection.3.1.7.nupkg.sha512",
+    "C:\\Users\\23663\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.7\\microsoft.extensions.dependencyinjection.abstractions.3.1.7.nupkg.sha512",
+    "C:\\Users\\23663\\.nuget\\packages\\microsoft.extensions.options\\3.1.7\\microsoft.extensions.options.3.1.7.nupkg.sha512",
+    "C:\\Users\\23663\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\3.1.7\\microsoft.extensions.options.configurationextensions.3.1.7.nupkg.sha512",
+    "C:\\Users\\23663\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.7\\microsoft.extensions.primitives.3.1.7.nupkg.sha512",
     "C:\\Users\\23663\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []

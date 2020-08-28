@@ -12,14 +12,15 @@ using ChenYiFan.ElasticSearch.Tools.QueryGenerates;
 using Newtonsoft.Json;
 using ChenYiFan.ElasticSearch.IConstraint;
 using ChenYiFan.ElasticSearch.Params.MessageResponse;
+using Microsoft.Extensions.Options;
 
 namespace ChenYiFan.ElasticSearch.Request
 {
     public class RequestElasticSearch : IRequestElasticSearch
     {
-        private readonly ElasticSearchConf _elasticSearchConf;
+        private readonly IOptionsMonitor<ElasticSearchConf> _elasticSearchConf;
 
-        public RequestElasticSearch(ElasticSearchConf elasticSearchConf)
+        public RequestElasticSearch(IOptionsMonitor<ElasticSearchConf> elasticSearchConf)
         {
             _elasticSearchConf = elasticSearchConf;
         }
@@ -113,7 +114,7 @@ namespace ChenYiFan.ElasticSearch.Request
                 return new EsResponseResult { IsSuccess = false, Message = "参数错误" };
             }
 
-            var path = $"{_elasticSearchConf.Url}/" + $"{table}/{operation}/{handle}".Trim('/').Replace("//", "/");
+            var path = $"{_elasticSearchConf.CurrentValue.Url}/" + $"{table}/{operation}/{handle}".Trim('/').Replace("//", "/");
             Console.WriteLine(path);
 
             EsResponseResult esHttpResult;

@@ -1,0 +1,9 @@
+H:\codeLib\Elasticsearch\ElasticsearchNet\ChenYifan.Elasticsearch\ChenYiFan.ElasticSearch\bin\Release\netcoreapp3.1\ChenYiFan.ElasticSearch.deps.json
+H:\codeLib\Elasticsearch\ElasticsearchNet\ChenYifan.Elasticsearch\ChenYiFan.ElasticSearch\bin\Release\netcoreapp3.1\ChenYiFan.ElasticSearch.dll
+H:\codeLib\Elasticsearch\ElasticsearchNet\ChenYifan.Elasticsearch\ChenYiFan.ElasticSearch\bin\Release\netcoreapp3.1\ChenYiFan.ElasticSearch.pdb
+H:\codeLib\Elasticsearch\ElasticsearchNet\ChenYifan.Elasticsearch\ChenYiFan.ElasticSearch\obj\Release\netcoreapp3.1\ChenYiFan.ElasticSearch.csprojAssemblyReference.cache
+H:\codeLib\Elasticsearch\ElasticsearchNet\ChenYifan.Elasticsearch\ChenYiFan.ElasticSearch\obj\Release\netcoreapp3.1\ChenYiFan.ElasticSearch.AssemblyInfoInputs.cache
+H:\codeLib\Elasticsearch\ElasticsearchNet\ChenYifan.Elasticsearch\ChenYiFan.ElasticSearch\obj\Release\netcoreapp3.1\ChenYiFan.ElasticSearch.AssemblyInfo.cs
+H:\codeLib\Elasticsearch\ElasticsearchNet\ChenYifan.Elasticsearch\ChenYiFan.ElasticSearch\obj\Release\netcoreapp3.1\ChenYiFan.ElasticSearch.csproj.CoreCompileInputs.cache
+H:\codeLib\Elasticsearch\ElasticsearchNet\ChenYifan.Elasticsearch\ChenYiFan.ElasticSearch\obj\Release\netcoreapp3.1\ChenYiFan.ElasticSearch.dll
+H:\codeLib\Elasticsearch\ElasticsearchNet\ChenYifan.Elasticsearch\ChenYiFan.ElasticSearch\obj\Release\netcoreapp3.1\ChenYiFan.ElasticSearch.pdb
