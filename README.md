@@ -8,7 +8,7 @@
 <p>     在Startup中添加</p>
 <p>         services.AddCyfElasticSearchConf(_configuration);</p>
    
-<p>     同时也不一定需要使用ElasticSearch作为config的section名，可以使用如下的方式自定义字段</p>
+<p>     或者使用ElasticSearch作为config的section名，可以使用如下的方式自定义字段</p>
 <p>         appsettings.json:</p>
 <p>             "beReplyElasticSearch": {</p>
 <p>                 "Url": "http://localhost:9200" // ElasticSearch的路径</p>
